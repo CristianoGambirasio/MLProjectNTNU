@@ -33,3 +33,7 @@ While file `X_train_observed.parquet` contains one time-related column `date_for
 both `X_train_estimated.parquet` and  `X_test_estimated.parquet` additionally contain `date_calc` to indicate when the forecast was produced.
 This type of test data makes evaluation closer to how the forecasting methods that are used in production.
 Evaluation measure is [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error).
+
+# Useful links
+bayesian optimization:
+https://scikit-optimize.github.io/stable/auto_examples/sklearn-gridsearchcv-replacement.html
