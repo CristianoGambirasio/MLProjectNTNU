@@ -23,4 +23,9 @@ in this way the final model should give a rough prediction thanks to observed da
 - create Test set 
 - use optuna
 - compare feature importance of xgboost with lasso feature importance
+
+- plot feature vs pv_measurement
+- new train/test split
+- use day of year instead of day of month
+- shuffeling data before training
     
