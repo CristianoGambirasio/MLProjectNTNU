@@ -26,6 +26,8 @@ in this way the final model should give a rough prediction thanks to observed da
 
 - plot feature vs pv_measurement
 - new train/test split
-- use day of year instead of day of month
+- use day of year instead of month
 - shuffeling data before training
+
+- try different standardizers per building
     
