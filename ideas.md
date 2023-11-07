@@ -31,3 +31,9 @@ in this way the final model should give a rough prediction thanks to observed da
 
 - try different standardizers per building
     
+
+
+
+- remove weird lag features
+- sort min->max
+- add mean per hour
