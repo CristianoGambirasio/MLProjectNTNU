@@ -505,6 +505,7 @@ class DataWrapper:
         if end_idx is None:
             end_idx = len(y)
         plt.figure(figsize=(20,6))
+        # plt.ylim(0,300)
         plt.plot(y_pred[start_idx:end_idx],label='prediction')
         plt.plot(y[start_idx:end_idx],label='pv_measurement')
         plt.legend()

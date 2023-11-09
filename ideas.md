@@ -37,3 +37,6 @@ in this way the final model should give a rough prediction thanks to observed da
 - remove weird lag features
 - sort min->max
 - add mean per hour
+
+
+- stacking models by random seed
