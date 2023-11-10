@@ -1,0 +1,329 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 60,
+        "model_time_limit": null,
+        "steps": [
+            "adjust_validation",
+            "simple_algorithms",
+            "default_algorithms",
+            "not_so_random",
+            "mix_encoding",
+            "golden_features",
+            "kmeans_features",
+            "insert_random_feature",
+            "features_selection",
+            "hill_climbing_1",
+            "hill_climbing_2",
+            "ensemble",
+            "ensemble_stacked"
+        ],
+        "algorithms": [
+            "LightGBM"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.39380884170532227
+            },
+            {
+                "model_name": "1_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "adjust_validation",
+                "train_time": 1.4204058647155762
+            },
+            {
+                "model_name": "2_Default_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "default_algorithms",
+                "train_time": 94.88737297058105
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.0536189079284668
+            }
+        ],
+        "is_hill_climbing": true,
+        "is_stacking": false
+    },
+    "all_params": {
+        "adjust_validation": [
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "building_id": [
+                            "categorical_to_int"
+                        ],
+                        "delta_forecast": [
+                            "na_fill_median"
+                        ],
+                        "min_ceiling_height_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "min_cloud_base_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "min_snow_density:kgm3": [
+                            "remove_column"
+                        ],
+                        "min_snow_drift:idx": [
+                            "remove_column"
+                        ],
+                        "min_effective_cloud_cover_5h_mean": [
+                            "na_fill_median"
+                        ],
+                        "min_GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "min_temp*GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_temp*GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "min_effective_cloud_cover:p_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_effective_cloud_cover:p_1h": [
+                            "na_fill_median"
+                        ],
+                        "min_cloud_base_agl:m_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_cloud_base_agl:m_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_ceiling_height_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "max_cloud_base_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "max_snow_density:kgm3": [
+                            "remove_column"
+                        ],
+                        "max_snow_drift:idx": [
+                            "remove_column"
+                        ],
+                        "max_effective_cloud_cover_5h_mean": [
+                            "na_fill_median"
+                        ],
+                        "max_GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_temp*GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_temp*GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_effective_cloud_cover:p_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_effective_cloud_cover:p_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_cloud_base_agl:m_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_cloud_base_agl:m_1h": [
+                            "na_fill_median"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.9,
+                    "shuffle": true,
+                    "X_path": "AutoML_Results/X.data",
+                    "y_path": "AutoML_Results/y.data",
+                    "results_path": "AutoML_Results/"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 43,
+                    "criterion": "friedman_mse",
+                    "max_depth": 4,
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "1_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.05061843013418616,
+                "train_time": 1.5764029026031494,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "building_id": [
+                            "categorical_to_int"
+                        ],
+                        "delta_forecast": [
+                            "na_fill_median"
+                        ],
+                        "min_ceiling_height_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "min_cloud_base_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "min_snow_density:kgm3": [
+                            "remove_column"
+                        ],
+                        "min_snow_drift:idx": [
+                            "remove_column"
+                        ],
+                        "min_effective_cloud_cover_5h_mean": [
+                            "na_fill_median"
+                        ],
+                        "min_GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "min_temp*GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_temp*GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "min_effective_cloud_cover:p_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_effective_cloud_cover:p_1h": [
+                            "na_fill_median"
+                        ],
+                        "min_cloud_base_agl:m_-1h": [
+                            "na_fill_median"
+                        ],
+                        "min_cloud_base_agl:m_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_ceiling_height_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "max_cloud_base_agl:m": [
+                            "na_fill_median"
+                        ],
+                        "max_snow_density:kgm3": [
+                            "remove_column"
+                        ],
+                        "max_snow_drift:idx": [
+                            "remove_column"
+                        ],
+                        "max_effective_cloud_cover_5h_mean": [
+                            "na_fill_median"
+                        ],
+                        "max_GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_temp*GHI_lag_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_temp*GHI_lag_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_effective_cloud_cover:p_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_effective_cloud_cover:p_1h": [
+                            "na_fill_median"
+                        ],
+                        "max_cloud_base_agl:m_-1h": [
+                            "na_fill_median"
+                        ],
+                        "max_cloud_base_agl:m_1h": [
+                            "na_fill_median"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.9,
+                    "shuffle": true,
+                    "X_path": "AutoML_Results/X.data",
+                    "y_path": "AutoML_Results/y.data",
+                    "results_path": "AutoML_Results/"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "objective": "regression",
+                    "num_leaves": 63,
+                    "learning_rate": 0.05,
+                    "feature_fraction": 0.9,
+                    "bagging_fraction": 0.9,
+                    "min_data_in_leaf": 10,
+                    "seed": 2,
+                    "metric": "l1",
+                    "custom_eval_metric_name": null,
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "2_Default_LightGBM",
+                "status": "trained",
+                "final_loss": 0.024601742916456674,
+                "train_time": 95.08595132827759,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.024601742916456674,
+                "train_time": 0.0536189079284668
+            }
+        ]
+    },
+    "adjust_validation": true
+}
