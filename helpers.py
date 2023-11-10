@@ -312,6 +312,18 @@ class DataWrapper:
 
         X['temp*GHI_lag_-1h'] = X.groupby(['building_id'])['temp*GHI'].shift(-1*4)
         X['temp*GHI_lag_1h'] = X.groupby(['building_id'])['temp*GHI'].shift(1*4)
+
+        # new features
+        X['effective_cloud_cover:p_-1h'] = X.groupby(['building_id'])['effective_cloud_cover:p'].shift(-1*4)
+        X['effective_cloud_cover:p_1h'] = X.groupby(['building_id'])['effective_cloud_cover:p'].shift(1*4)
+
+
+        X['cloud_base_agl:m_-1h'] = X.groupby(['building_id'])['cloud_base_agl:m'].shift(-1*4)
+        X['cloud_base_agl:m_1h'] = X.groupby(['building_id'])['cloud_base_agl:m'].shift(1*4)
+
+
+
+
         return X
 
     def get_train(self,aggregated,drop_val=True,drop_test=True,y_scaled=False):
