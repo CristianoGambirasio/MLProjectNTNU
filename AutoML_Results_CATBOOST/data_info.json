@@ -1,0 +1,784 @@
+{
+    "columns": [
+        "building_id",
+        "isEstimated",
+        "delta_forecast",
+        "month",
+        "hour",
+        "min_absolute_humidity_2m:gm3",
+        "min_air_density_2m:kgm3",
+        "min_ceiling_height_agl:m",
+        "min_clear_sky_energy_1h:J",
+        "min_clear_sky_rad:W",
+        "min_cloud_base_agl:m",
+        "min_dew_or_rime:idx",
+        "min_dew_point_2m:K",
+        "min_diffuse_rad:W",
+        "min_diffuse_rad_1h:J",
+        "min_direct_rad:W",
+        "min_direct_rad_1h:J",
+        "min_effective_cloud_cover:p",
+        "min_is_day:idx",
+        "min_is_in_shadow:idx",
+        "min_msl_pressure:hPa",
+        "min_precip_5min:mm",
+        "min_precip_type_5min:idx",
+        "min_pressure_100m:hPa",
+        "min_pressure_50m:hPa",
+        "min_prob_rime:p",
+        "min_rain_water:kgm2",
+        "min_relative_humidity_1000hPa:p",
+        "min_sfc_pressure:hPa",
+        "min_sun_azimuth:d",
+        "min_sun_elevation:d",
+        "min_super_cooled_liquid_water:kgm2",
+        "min_t_1000hPa:K",
+        "min_total_cloud_cover:p",
+        "min_visibility:m",
+        "min_wind_speed_10m:ms",
+        "min_wind_speed_u_10m:ms",
+        "min_wind_speed_v_10m:ms",
+        "min_wind_speed_w_1000hPa:ms",
+        "min_GHI",
+        "min_wind_angle",
+        "min_temp*GHI",
+        "min_wind*humidity",
+        "min_sun_height*diff_rad",
+        "min_wind_angle_sin",
+        "min_wind_angle_cos",
+        "min_hour_sin",
+        "min_hour_cos",
+        "min_GHI_daily_mean",
+        "min_GHI_daily_std",
+        "min_effective_cloud_cover_5h_mean",
+        "min_GHI_lag_-1h",
+        "min_GHI_lag_1h",
+        "min_temp*GHI_lag_-1h",
+        "min_temp*GHI_lag_1h",
+        "min_effective_cloud_cover:p_-1h",
+        "min_effective_cloud_cover:p_1h",
+        "min_cloud_base_agl:m_-1h",
+        "min_cloud_base_agl:m_1h",
+        "max_absolute_humidity_2m:gm3",
+        "max_air_density_2m:kgm3",
+        "max_ceiling_height_agl:m",
+        "max_clear_sky_energy_1h:J",
+        "max_clear_sky_rad:W",
+        "max_cloud_base_agl:m",
+        "max_dew_or_rime:idx",
+        "max_dew_point_2m:K",
+        "max_diffuse_rad:W",
+        "max_diffuse_rad_1h:J",
+        "max_direct_rad:W",
+        "max_direct_rad_1h:J",
+        "max_effective_cloud_cover:p",
+        "max_is_day:idx",
+        "max_is_in_shadow:idx",
+        "max_msl_pressure:hPa",
+        "max_precip_5min:mm",
+        "max_precip_type_5min:idx",
+        "max_pressure_100m:hPa",
+        "max_pressure_50m:hPa",
+        "max_prob_rime:p",
+        "max_rain_water:kgm2",
+        "max_relative_humidity_1000hPa:p",
+        "max_sfc_pressure:hPa",
+        "max_sun_azimuth:d",
+        "max_sun_elevation:d",
+        "max_super_cooled_liquid_water:kgm2",
+        "max_t_1000hPa:K",
+        "max_total_cloud_cover:p",
+        "max_visibility:m",
+        "max_wind_speed_10m:ms",
+        "max_wind_speed_u_10m:ms",
+        "max_wind_speed_v_10m:ms",
+        "max_wind_speed_w_1000hPa:ms",
+        "max_GHI",
+        "max_wind_angle",
+        "max_temp*GHI",
+        "max_wind*humidity",
+        "max_sun_height*diff_rad",
+        "max_wind_angle_sin",
+        "max_wind_angle_cos",
+        "max_hour_sin",
+        "max_hour_cos",
+        "max_GHI_daily_mean",
+        "max_GHI_daily_std",
+        "max_effective_cloud_cover_5h_mean",
+        "max_GHI_lag_-1h",
+        "max_GHI_lag_1h",
+        "max_temp*GHI_lag_-1h",
+        "max_temp*GHI_lag_1h",
+        "max_effective_cloud_cover:p_-1h",
+        "max_effective_cloud_cover:p_1h",
+        "max_cloud_base_agl:m_-1h",
+        "max_cloud_base_agl:m_1h",
+        "mean_absolute_humidity_2m:gm3",
+        "mean_air_density_2m:kgm3",
+        "mean_ceiling_height_agl:m",
+        "mean_clear_sky_energy_1h:J",
+        "mean_clear_sky_rad:W",
+        "mean_cloud_base_agl:m",
+        "mean_dew_or_rime:idx",
+        "mean_dew_point_2m:K",
+        "mean_diffuse_rad:W",
+        "mean_diffuse_rad_1h:J",
+        "mean_direct_rad:W",
+        "mean_direct_rad_1h:J",
+        "mean_effective_cloud_cover:p",
+        "mean_is_day:idx",
+        "mean_is_in_shadow:idx",
+        "mean_msl_pressure:hPa",
+        "mean_precip_5min:mm",
+        "mean_precip_type_5min:idx",
+        "mean_pressure_100m:hPa",
+        "mean_pressure_50m:hPa",
+        "mean_prob_rime:p",
+        "mean_rain_water:kgm2",
+        "mean_relative_humidity_1000hPa:p",
+        "mean_sfc_pressure:hPa",
+        "mean_sun_azimuth:d",
+        "mean_sun_elevation:d",
+        "mean_super_cooled_liquid_water:kgm2",
+        "mean_t_1000hPa:K",
+        "mean_total_cloud_cover:p",
+        "mean_visibility:m",
+        "mean_wind_speed_10m:ms",
+        "mean_wind_speed_u_10m:ms",
+        "mean_wind_speed_v_10m:ms",
+        "mean_wind_speed_w_1000hPa:ms",
+        "mean_GHI",
+        "mean_wind_angle",
+        "mean_temp*GHI",
+        "mean_wind*humidity",
+        "mean_sun_height*diff_rad",
+        "mean_wind_angle_sin",
+        "mean_wind_angle_cos",
+        "mean_hour_sin",
+        "mean_hour_cos",
+        "mean_GHI_daily_mean",
+        "mean_GHI_daily_std",
+        "mean_effective_cloud_cover_5h_mean",
+        "mean_GHI_lag_-1h",
+        "mean_GHI_lag_1h",
+        "mean_temp*GHI_lag_-1h",
+        "mean_temp*GHI_lag_1h",
+        "mean_effective_cloud_cover:p_-1h",
+        "mean_effective_cloud_cover:p_1h",
+        "mean_cloud_base_agl:m_-1h",
+        "mean_cloud_base_agl:m_1h",
+        "std_absolute_humidity_2m:gm3",
+        "std_air_density_2m:kgm3",
+        "std_ceiling_height_agl:m",
+        "std_clear_sky_energy_1h:J",
+        "std_clear_sky_rad:W",
+        "std_cloud_base_agl:m",
+        "std_dew_or_rime:idx",
+        "std_dew_point_2m:K",
+        "std_diffuse_rad:W",
+        "std_diffuse_rad_1h:J",
+        "std_direct_rad:W",
+        "std_direct_rad_1h:J",
+        "std_effective_cloud_cover:p",
+        "std_is_day:idx",
+        "std_is_in_shadow:idx",
+        "std_msl_pressure:hPa",
+        "std_precip_5min:mm",
+        "std_precip_type_5min:idx",
+        "std_pressure_100m:hPa",
+        "std_pressure_50m:hPa",
+        "std_prob_rime:p",
+        "std_rain_water:kgm2",
+        "std_relative_humidity_1000hPa:p",
+        "std_sfc_pressure:hPa",
+        "std_sun_azimuth:d",
+        "std_sun_elevation:d",
+        "std_super_cooled_liquid_water:kgm2",
+        "std_t_1000hPa:K",
+        "std_total_cloud_cover:p",
+        "std_visibility:m",
+        "std_wind_speed_10m:ms",
+        "std_wind_speed_u_10m:ms",
+        "std_wind_speed_v_10m:ms",
+        "std_wind_speed_w_1000hPa:ms",
+        "std_GHI",
+        "std_wind_angle",
+        "std_temp*GHI",
+        "std_wind*humidity",
+        "std_sun_height*diff_rad",
+        "std_wind_angle_sin",
+        "std_wind_angle_cos",
+        "std_hour_sin",
+        "std_hour_cos",
+        "std_GHI_daily_mean",
+        "std_GHI_daily_std",
+        "std_effective_cloud_cover_5h_mean",
+        "std_GHI_lag_-1h",
+        "std_GHI_lag_1h",
+        "std_temp*GHI_lag_-1h",
+        "std_temp*GHI_lag_1h",
+        "std_effective_cloud_cover:p_-1h",
+        "std_effective_cloud_cover:p_1h",
+        "std_cloud_base_agl:m_-1h",
+        "std_cloud_base_agl:m_1h"
+    ],
+    "rows": 45654,
+    "cols": 221,
+    "target_is_numeric": true,
+    "columns_info": {
+        "building_id": [
+            "categorical",
+            "few_categories"
+        ],
+        "isEstimated": [],
+        "delta_forecast": [
+            "scale"
+        ],
+        "month": [
+            "scale"
+        ],
+        "hour": [
+            "scale"
+        ],
+        "min_absolute_humidity_2m:gm3": [
+            "scale"
+        ],
+        "min_air_density_2m:kgm3": [
+            "scale"
+        ],
+        "min_ceiling_height_agl:m": [
+            "scale"
+        ],
+        "min_clear_sky_energy_1h:J": [
+            "scale"
+        ],
+        "min_clear_sky_rad:W": [
+            "scale"
+        ],
+        "min_cloud_base_agl:m": [
+            "scale"
+        ],
+        "min_dew_or_rime:idx": [],
+        "min_dew_point_2m:K": [
+            "scale"
+        ],
+        "min_diffuse_rad:W": [
+            "scale"
+        ],
+        "min_diffuse_rad_1h:J": [
+            "scale"
+        ],
+        "min_direct_rad:W": [
+            "scale"
+        ],
+        "min_direct_rad_1h:J": [
+            "scale"
+        ],
+        "min_effective_cloud_cover:p": [
+            "scale"
+        ],
+        "min_is_day:idx": [
+            "scale"
+        ],
+        "min_is_in_shadow:idx": [],
+        "min_msl_pressure:hPa": [
+            "scale"
+        ],
+        "min_precip_5min:mm": [],
+        "min_precip_type_5min:idx": [],
+        "min_pressure_100m:hPa": [
+            "scale"
+        ],
+        "min_pressure_50m:hPa": [
+            "scale"
+        ],
+        "min_prob_rime:p": [
+            "scale"
+        ],
+        "min_rain_water:kgm2": [],
+        "min_relative_humidity_1000hPa:p": [
+            "scale"
+        ],
+        "min_sfc_pressure:hPa": [
+            "scale"
+        ],
+        "min_sun_azimuth:d": [
+            "scale"
+        ],
+        "min_sun_elevation:d": [
+            "scale"
+        ],
+        "min_super_cooled_liquid_water:kgm2": [],
+        "min_t_1000hPa:K": [
+            "scale"
+        ],
+        "min_total_cloud_cover:p": [
+            "scale"
+        ],
+        "min_visibility:m": [
+            "scale"
+        ],
+        "min_wind_speed_10m:ms": [
+            "scale"
+        ],
+        "min_wind_speed_u_10m:ms": [
+            "scale"
+        ],
+        "min_wind_speed_v_10m:ms": [
+            "scale"
+        ],
+        "min_wind_speed_w_1000hPa:ms": [],
+        "min_GHI": [
+            "scale"
+        ],
+        "min_wind_angle": [
+            "scale"
+        ],
+        "min_temp*GHI": [
+            "scale"
+        ],
+        "min_wind*humidity": [
+            "scale"
+        ],
+        "min_sun_height*diff_rad": [
+            "scale"
+        ],
+        "min_wind_angle_sin": [],
+        "min_wind_angle_cos": [],
+        "min_hour_sin": [],
+        "min_hour_cos": [],
+        "min_GHI_daily_mean": [
+            "scale"
+        ],
+        "min_GHI_daily_std": [
+            "scale"
+        ],
+        "min_effective_cloud_cover_5h_mean": [
+            "scale"
+        ],
+        "min_GHI_lag_-1h": [
+            "scale"
+        ],
+        "min_GHI_lag_1h": [
+            "scale"
+        ],
+        "min_temp*GHI_lag_-1h": [
+            "scale"
+        ],
+        "min_temp*GHI_lag_1h": [
+            "scale"
+        ],
+        "min_effective_cloud_cover:p_-1h": [
+            "scale"
+        ],
+        "min_effective_cloud_cover:p_1h": [
+            "scale"
+        ],
+        "min_cloud_base_agl:m_-1h": [
+            "scale"
+        ],
+        "min_cloud_base_agl:m_1h": [
+            "scale"
+        ],
+        "max_absolute_humidity_2m:gm3": [
+            "scale"
+        ],
+        "max_air_density_2m:kgm3": [
+            "scale"
+        ],
+        "max_ceiling_height_agl:m": [
+            "scale"
+        ],
+        "max_clear_sky_energy_1h:J": [
+            "scale"
+        ],
+        "max_clear_sky_rad:W": [
+            "scale"
+        ],
+        "max_cloud_base_agl:m": [
+            "scale"
+        ],
+        "max_dew_or_rime:idx": [],
+        "max_dew_point_2m:K": [
+            "scale"
+        ],
+        "max_diffuse_rad:W": [
+            "scale"
+        ],
+        "max_diffuse_rad_1h:J": [
+            "scale"
+        ],
+        "max_direct_rad:W": [
+            "scale"
+        ],
+        "max_direct_rad_1h:J": [
+            "scale"
+        ],
+        "max_effective_cloud_cover:p": [
+            "scale"
+        ],
+        "max_is_day:idx": [
+            "scale"
+        ],
+        "max_is_in_shadow:idx": [],
+        "max_msl_pressure:hPa": [
+            "scale"
+        ],
+        "max_precip_5min:mm": [],
+        "max_precip_type_5min:idx": [],
+        "max_pressure_100m:hPa": [
+            "scale"
+        ],
+        "max_pressure_50m:hPa": [
+            "scale"
+        ],
+        "max_prob_rime:p": [
+            "scale"
+        ],
+        "max_rain_water:kgm2": [],
+        "max_relative_humidity_1000hPa:p": [
+            "scale"
+        ],
+        "max_sfc_pressure:hPa": [
+            "scale"
+        ],
+        "max_sun_azimuth:d": [
+            "scale"
+        ],
+        "max_sun_elevation:d": [
+            "scale"
+        ],
+        "max_super_cooled_liquid_water:kgm2": [],
+        "max_t_1000hPa:K": [
+            "scale"
+        ],
+        "max_total_cloud_cover:p": [
+            "scale"
+        ],
+        "max_visibility:m": [
+            "scale"
+        ],
+        "max_wind_speed_10m:ms": [
+            "scale"
+        ],
+        "max_wind_speed_u_10m:ms": [
+            "scale"
+        ],
+        "max_wind_speed_v_10m:ms": [
+            "scale"
+        ],
+        "max_wind_speed_w_1000hPa:ms": [],
+        "max_GHI": [
+            "scale"
+        ],
+        "max_wind_angle": [
+            "scale"
+        ],
+        "max_temp*GHI": [
+            "scale"
+        ],
+        "max_wind*humidity": [
+            "scale"
+        ],
+        "max_sun_height*diff_rad": [
+            "scale"
+        ],
+        "max_wind_angle_sin": [],
+        "max_wind_angle_cos": [],
+        "max_hour_sin": [],
+        "max_hour_cos": [],
+        "max_GHI_daily_mean": [
+            "scale"
+        ],
+        "max_GHI_daily_std": [
+            "scale"
+        ],
+        "max_effective_cloud_cover_5h_mean": [
+            "scale"
+        ],
+        "max_GHI_lag_-1h": [
+            "scale"
+        ],
+        "max_GHI_lag_1h": [
+            "scale"
+        ],
+        "max_temp*GHI_lag_-1h": [
+            "scale"
+        ],
+        "max_temp*GHI_lag_1h": [
+            "scale"
+        ],
+        "max_effective_cloud_cover:p_-1h": [
+            "scale"
+        ],
+        "max_effective_cloud_cover:p_1h": [
+            "scale"
+        ],
+        "max_cloud_base_agl:m_-1h": [
+            "scale"
+        ],
+        "max_cloud_base_agl:m_1h": [
+            "scale"
+        ],
+        "mean_absolute_humidity_2m:gm3": [
+            "scale"
+        ],
+        "mean_air_density_2m:kgm3": [
+            "scale"
+        ],
+        "mean_ceiling_height_agl:m": [
+            "scale"
+        ],
+        "mean_clear_sky_energy_1h:J": [
+            "scale"
+        ],
+        "mean_clear_sky_rad:W": [
+            "scale"
+        ],
+        "mean_cloud_base_agl:m": [
+            "scale"
+        ],
+        "mean_dew_or_rime:idx": [],
+        "mean_dew_point_2m:K": [
+            "scale"
+        ],
+        "mean_diffuse_rad:W": [
+            "scale"
+        ],
+        "mean_diffuse_rad_1h:J": [
+            "scale"
+        ],
+        "mean_direct_rad:W": [
+            "scale"
+        ],
+        "mean_direct_rad_1h:J": [
+            "scale"
+        ],
+        "mean_effective_cloud_cover:p": [
+            "scale"
+        ],
+        "mean_is_day:idx": [
+            "scale"
+        ],
+        "mean_is_in_shadow:idx": [],
+        "mean_msl_pressure:hPa": [
+            "scale"
+        ],
+        "mean_precip_5min:mm": [],
+        "mean_precip_type_5min:idx": [],
+        "mean_pressure_100m:hPa": [
+            "scale"
+        ],
+        "mean_pressure_50m:hPa": [
+            "scale"
+        ],
+        "mean_prob_rime:p": [
+            "scale"
+        ],
+        "mean_rain_water:kgm2": [],
+        "mean_relative_humidity_1000hPa:p": [
+            "scale"
+        ],
+        "mean_sfc_pressure:hPa": [
+            "scale"
+        ],
+        "mean_sun_azimuth:d": [
+            "scale"
+        ],
+        "mean_sun_elevation:d": [
+            "scale"
+        ],
+        "mean_super_cooled_liquid_water:kgm2": [],
+        "mean_t_1000hPa:K": [
+            "scale"
+        ],
+        "mean_total_cloud_cover:p": [
+            "scale"
+        ],
+        "mean_visibility:m": [
+            "scale"
+        ],
+        "mean_wind_speed_10m:ms": [
+            "scale"
+        ],
+        "mean_wind_speed_u_10m:ms": [
+            "scale"
+        ],
+        "mean_wind_speed_v_10m:ms": [
+            "scale"
+        ],
+        "mean_wind_speed_w_1000hPa:ms": [],
+        "mean_GHI": [
+            "scale"
+        ],
+        "mean_wind_angle": [
+            "scale"
+        ],
+        "mean_temp*GHI": [
+            "scale"
+        ],
+        "mean_wind*humidity": [
+            "scale"
+        ],
+        "mean_sun_height*diff_rad": [
+            "scale"
+        ],
+        "mean_wind_angle_sin": [],
+        "mean_wind_angle_cos": [],
+        "mean_hour_sin": [],
+        "mean_hour_cos": [],
+        "mean_GHI_daily_mean": [
+            "scale"
+        ],
+        "mean_GHI_daily_std": [
+            "scale"
+        ],
+        "mean_effective_cloud_cover_5h_mean": [
+            "scale"
+        ],
+        "mean_GHI_lag_-1h": [
+            "scale"
+        ],
+        "mean_GHI_lag_1h": [
+            "scale"
+        ],
+        "mean_temp*GHI_lag_-1h": [
+            "scale"
+        ],
+        "mean_temp*GHI_lag_1h": [
+            "scale"
+        ],
+        "mean_effective_cloud_cover:p_-1h": [
+            "scale"
+        ],
+        "mean_effective_cloud_cover:p_1h": [
+            "scale"
+        ],
+        "mean_cloud_base_agl:m_-1h": [
+            "scale"
+        ],
+        "mean_cloud_base_agl:m_1h": [
+            "scale"
+        ],
+        "std_absolute_humidity_2m:gm3": [],
+        "std_air_density_2m:kgm3": [],
+        "std_ceiling_height_agl:m": [
+            "scale"
+        ],
+        "std_clear_sky_energy_1h:J": [
+            "scale"
+        ],
+        "std_clear_sky_rad:W": [
+            "scale"
+        ],
+        "std_cloud_base_agl:m": [
+            "scale"
+        ],
+        "std_dew_or_rime:idx": [],
+        "std_dew_point_2m:K": [],
+        "std_diffuse_rad:W": [
+            "scale"
+        ],
+        "std_diffuse_rad_1h:J": [
+            "scale"
+        ],
+        "std_direct_rad:W": [
+            "scale"
+        ],
+        "std_direct_rad_1h:J": [
+            "scale"
+        ],
+        "std_effective_cloud_cover:p": [
+            "scale"
+        ],
+        "std_is_day:idx": [],
+        "std_is_in_shadow:idx": [],
+        "std_msl_pressure:hPa": [],
+        "std_precip_5min:mm": [],
+        "std_precip_type_5min:idx": [],
+        "std_pressure_100m:hPa": [],
+        "std_pressure_50m:hPa": [],
+        "std_prob_rime:p": [],
+        "std_rain_water:kgm2": [],
+        "std_relative_humidity_1000hPa:p": [
+            "scale"
+        ],
+        "std_sfc_pressure:hPa": [],
+        "std_sun_azimuth:d": [
+            "scale"
+        ],
+        "std_sun_elevation:d": [
+            "scale"
+        ],
+        "std_super_cooled_liquid_water:kgm2": [],
+        "std_t_1000hPa:K": [],
+        "std_total_cloud_cover:p": [
+            "scale"
+        ],
+        "std_visibility:m": [
+            "scale"
+        ],
+        "std_wind_speed_10m:ms": [],
+        "std_wind_speed_u_10m:ms": [],
+        "std_wind_speed_v_10m:ms": [],
+        "std_wind_speed_w_1000hPa:ms": [],
+        "std_GHI": [
+            "scale"
+        ],
+        "std_wind_angle": [],
+        "std_temp*GHI": [
+            "scale"
+        ],
+        "std_wind*humidity": [
+            "scale"
+        ],
+        "std_sun_height*diff_rad": [
+            "scale"
+        ],
+        "std_wind_angle_sin": [],
+        "std_wind_angle_cos": [],
+        "std_hour_sin": [
+            "constant_column"
+        ],
+        "std_hour_cos": [
+            "constant_column"
+        ],
+        "std_GHI_daily_mean": [
+            "constant_column"
+        ],
+        "std_GHI_daily_std": [
+            "constant_column"
+        ],
+        "std_effective_cloud_cover_5h_mean": [
+            "scale"
+        ],
+        "std_GHI_lag_-1h": [
+            "scale"
+        ],
+        "std_GHI_lag_1h": [
+            "scale"
+        ],
+        "std_temp*GHI_lag_-1h": [
+            "scale"
+        ],
+        "std_temp*GHI_lag_1h": [
+            "scale"
+        ],
+        "std_effective_cloud_cover:p_-1h": [
+            "scale"
+        ],
+        "std_effective_cloud_cover:p_1h": [
+            "scale"
+        ],
+        "std_cloud_base_agl:m_-1h": [
+            "scale"
+        ],
+        "std_cloud_base_agl:m_1h": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 221,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false
+}

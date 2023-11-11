@@ -1,0 +1,2082 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 28800,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "not_so_random",
+            "mix_encoding",
+            "kmeans_features",
+            "hill_climbing_1",
+            "hill_climbing_2",
+            "ensemble",
+            "stack",
+            "ensemble_stacked"
+        ],
+        "algorithms": [
+            "CatBoost"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.766423225402832
+            },
+            {
+                "model_name": "1_Default_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "default_algorithms",
+                "train_time": 13.277121782302856
+            },
+            {
+                "model_name": "2_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 25.279480695724487
+            },
+            {
+                "model_name": "3_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 13.421153545379639
+            },
+            {
+                "model_name": "4_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 257.643705368042
+            },
+            {
+                "model_name": "5_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 17.29564642906189
+            },
+            {
+                "model_name": "6_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 56.30424618721008
+            },
+            {
+                "model_name": "7_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 37.94728922843933
+            },
+            {
+                "model_name": "8_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 22.564120054244995
+            },
+            {
+                "model_name": "9_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 21.27870798110962
+            },
+            {
+                "model_name": "10_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "not_so_random",
+                "train_time": 52.19585037231445
+            },
+            {
+                "model_name": "4_CatBoost_KMeansFeatures",
+                "model_type": "CatBoost",
+                "fit_level": "kmeans_features",
+                "train_time": 363.50186228752136
+            },
+            {
+                "model_name": "7_CatBoost_KMeansFeatures",
+                "model_type": "CatBoost",
+                "fit_level": "kmeans_features",
+                "train_time": 29.506870985031128
+            },
+            {
+                "model_name": "10_CatBoost_KMeansFeatures",
+                "model_type": "CatBoost",
+                "fit_level": "kmeans_features",
+                "train_time": 69.86798048019409
+            },
+            {
+                "model_name": "11_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_1",
+                "train_time": 158.42123413085938
+            },
+            {
+                "model_name": "12_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_1",
+                "train_time": 152.76367020606995
+            },
+            {
+                "model_name": "13_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_1",
+                "train_time": 43.033292055130005
+            },
+            {
+                "model_name": "14_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_2",
+                "train_time": 210.80121493339539
+            },
+            {
+                "model_name": "15_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_2",
+                "train_time": 208.7283070087433
+            },
+            {
+                "model_name": "16_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_2",
+                "train_time": 157.42566680908203
+            },
+            {
+                "model_name": "17_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_2",
+                "train_time": 83.05232882499695
+            },
+            {
+                "model_name": "18_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_2",
+                "train_time": 173.13755345344543
+            },
+            {
+                "model_name": "19_CatBoost",
+                "model_type": "CatBoost",
+                "fit_level": "hill_climbing_2",
+                "train_time": 144.29636788368225
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.9376375675201416
+            },
+            {
+                "model_name": "4_CatBoost_Stacked",
+                "model_type": "CatBoost",
+                "fit_level": "stack",
+                "train_time": 127.96086692810059
+            },
+            {
+                "model_name": "19_CatBoost_Stacked",
+                "model_type": "CatBoost",
+                "fit_level": "stack",
+                "train_time": 84.95945453643799
+            },
+            {
+                "model_name": "12_CatBoost_Stacked",
+                "model_type": "CatBoost",
+                "fit_level": "stack",
+                "train_time": 126.32837414741516
+            },
+            {
+                "model_name": "18_CatBoost_Stacked",
+                "model_type": "CatBoost",
+                "fit_level": "stack",
+                "train_time": 227.49213290214539
+            },
+            {
+                "model_name": "Ensemble_Stacked",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble_stacked",
+                "train_time": 1.3565995693206787
+            }
+        ],
+        "is_hill_climbing": true,
+        "is_stacking": true
+    },
+    "all_params": {
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "learning_rate": 0.1,
+                    "depth": 6,
+                    "rsm": 1,
+                    "loss_function": "RMSE",
+                    "seed": 1,
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "1_Default_CatBoost",
+                "status": "trained",
+                "final_loss": 0.052782488701513176,
+                "train_time": 13.67841911315918,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            }
+        ],
+        "not_so_random": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 43,
+                    "learning_rate": 0.1,
+                    "depth": 7,
+                    "rsm": 0.8,
+                    "loss_function": "RMSE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "2_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05276489590869859,
+                "train_time": 25.673667430877686,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 44,
+                    "learning_rate": 0.2,
+                    "depth": 6,
+                    "rsm": 0.8,
+                    "loss_function": "RMSE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "3_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05327662649413506,
+                "train_time": 13.828259229660034,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "4_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05070079305386406,
+                "train_time": 258.0575637817383,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 46,
+                    "learning_rate": 0.1,
+                    "depth": 4,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "5_CatBoost",
+                "status": "trained",
+                "final_loss": 0.052456259160164304,
+                "train_time": 17.698994159698486,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 47,
+                    "learning_rate": 0.025,
+                    "depth": 6,
+                    "rsm": 0.9,
+                    "loss_function": "RMSE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "6_CatBoost",
+                "status": "trained",
+                "final_loss": 0.0521026370468306,
+                "train_time": 56.71283769607544,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 48,
+                    "learning_rate": 0.1,
+                    "depth": 5,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "7_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05179997585573588,
+                "train_time": 38.35528922080994,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 49,
+                    "learning_rate": 0.2,
+                    "depth": 7,
+                    "rsm": 1.0,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "8_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05212361603802233,
+                "train_time": 22.96174430847168,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 50,
+                    "learning_rate": 0.1,
+                    "depth": 8,
+                    "rsm": 1.0,
+                    "loss_function": "RMSE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "9_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05256355038617803,
+                "train_time": 21.66671633720398,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 51,
+                    "learning_rate": 0.025,
+                    "depth": 6,
+                    "rsm": 1.0,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "10_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05203078952509099,
+                "train_time": 52.62120509147644,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            }
+        ],
+        "kmeans_features": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "4_CatBoost_KMeansFeatures",
+                "status": "trained",
+                "final_loss": 0.05021871301242661,
+                "train_time": 363.93893218040466,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 48,
+                    "learning_rate": 0.1,
+                    "depth": 5,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "7_CatBoost_KMeansFeatures",
+                "status": "trained",
+                "final_loss": 0.05240447820324245,
+                "train_time": 29.919654369354248,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 51,
+                    "learning_rate": 0.025,
+                    "depth": 6,
+                    "rsm": 1.0,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "10_CatBoost_KMeansFeatures",
+                "status": "trained",
+                "final_loss": 0.05171377018566735,
+                "train_time": 70.29937934875488,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            }
+        ],
+        "hill_climbing_1": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "11_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05069109202541797,
+                "train_time": 158.83226680755615,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "12_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05091370958615921,
+                "train_time": 153.17505383491516,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 51,
+                    "learning_rate": 0.05,
+                    "depth": 6,
+                    "rsm": 1.0,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "13_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05142699302937531,
+                "train_time": 43.455196142196655,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            }
+        ],
+        "hill_climbing_2": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "14_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05158629734657679,
+                "train_time": 211.2162070274353,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 1,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "15_CatBoost",
+                "status": "trained",
+                "final_loss": 0.050611251664063495,
+                "train_time": 209.15615510940552,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "16_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05151489631521147,
+                "train_time": 157.84495854377747,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 1,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "17_CatBoost",
+                "status": "trained",
+                "final_loss": 0.051562496846572846,
+                "train_time": 83.46069145202637,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "18_CatBoost",
+                "status": "trained",
+                "final_loss": 0.05121211756497721,
+                "train_time": 173.5372998714447,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 1,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "19_CatBoost",
+                "status": "trained",
+                "final_loss": 0.050868660481407375,
+                "train_time": 144.70016860961914,
+                "data_type": "original",
+                "max_time_for_learner": 2880.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.05004856109872163,
+                "train_time": 0.9376375675201416
+            }
+        ],
+        "stack": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "4_CatBoost_KMeansFeatures_Stacked",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "data_type": "original_kmeans_features_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 1,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "15_CatBoost_Stacked",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "data_type": "original_kmeans_features_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "11_CatBoost_Stacked",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "data_type": "original_kmeans_features_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "4_CatBoost_Stacked",
+                "status": "trained",
+                "final_loss": 0.05161784775305198,
+                "train_time": 128.3675606250763,
+                "data_type": "original_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 1,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "19_CatBoost_Stacked",
+                "status": "trained",
+                "final_loss": 0.05125662474463429,
+                "train_time": 85.35771894454956,
+                "data_type": "original_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 0.9,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "12_CatBoost_Stacked",
+                "status": "trained",
+                "final_loss": 0.051374326319829695,
+                "train_time": 126.73106980323792,
+                "data_type": "original_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.025,
+                    "depth": 9,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "18_CatBoost_Stacked",
+                "status": "trained",
+                "final_loss": 0.05098753515553952,
+                "train_time": 227.89599227905273,
+                "data_type": "original_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 51,
+                    "learning_rate": 0.05,
+                    "depth": 6,
+                    "rsm": 1.0,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "13_CatBoost_Stacked",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "data_type": "original_kmeans_features_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 0.8,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "16_CatBoost_Stacked",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "data_type": "original_kmeans_features_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "std_hour_sin": [
+                            "remove_column"
+                        ],
+                        "std_hour_cos": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_mean": [
+                            "remove_column"
+                        ],
+                        "std_GHI_daily_std": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression",
+                    "kmeans_features": {
+                        "results_path": "AutoML_Results_CATBOOST/"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "custom",
+                    "X_path": "AutoML_Results_CATBOOST/X_stacked.data",
+                    "y_path": "AutoML_Results_CATBOOST/y.data",
+                    "results_path": "AutoML_Results_CATBOOST/",
+                    "cv_path": "AutoML_Results_CATBOOST/cv.data"
+                },
+                "learner": {
+                    "model_type": "CatBoost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 45,
+                    "learning_rate": 0.05,
+                    "depth": 9,
+                    "rsm": 1,
+                    "loss_function": "MAPE",
+                    "eval_metric": "MAE",
+                    "explain_level": 0
+                },
+                "automl_random_state": 42,
+                "ml_task": "regression",
+                "explain_level": 0,
+                "name": "17_CatBoost_Stacked",
+                "status": "error",
+                "final_loss": null,
+                "train_time": null,
+                "data_type": "original_kmeans_features_stacked",
+                "max_time_for_learner": 2880.0,
+                "is_stacked": true
+            }
+        ],
+        "ensemble_stacked": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": true,
+                "name": "Ensemble_Stacked",
+                "status": "trained",
+                "final_loss": 0.05004132951920619,
+                "train_time": 1.3565995693206787
+            }
+        ]
+    },
+    "adjust_validation": false
+}
