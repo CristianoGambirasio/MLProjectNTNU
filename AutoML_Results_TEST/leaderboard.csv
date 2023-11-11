@@ -1,2 +1,0 @@
-name,model_type,metric_type,metric_value,train_time
-1_DecisionTree,Decision Tree,mae,0.05216921479956316,5.78

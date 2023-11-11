@@ -321,7 +321,6 @@ class DataWrapper:
             'cloud_base_agl:m_-1h',
             'cloud_base_agl:m_1h',
             'GHI_daily_std',
-            # effective_cloud_cover_5h_mean,
             'GHI_lag_-1h',
             'GHI_lag_1h',
             'temp*GHI_lag_-1h',

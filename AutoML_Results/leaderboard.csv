@@ -1,4 +1,0 @@
-name,model_type,metric_type,metric_value,train_time
-1_DecisionTree,Decision Tree,mae,0.05061843013418616,1.58
-2_Default_LightGBM,LightGBM,mae,0.024601742916456674,95.09
-Ensemble,Ensemble,mae,0.024601742916456674,0.05
