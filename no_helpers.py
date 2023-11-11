@@ -1,26 +1,8 @@
 import pandas as pd
 import numpy as np
-from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
-from sklearn.feature_selection import RFECV, RFE
-import xgboost
 
-from skopt import BayesSearchCV
-from skopt.plots import plot_objective
-from skopt.space import Real, Categorical, Integer
-
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler, MaxAbsScaler, MinMaxScaler, RobustScaler
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
-from sklearn.model_selection import PredefinedSplit
-from sklearn.metrics import make_scorer
-from lightgbm import LGBMRegressor
-from catboost import CatBoostRegressor
 
 from sklearn.base import BaseEstimator, TransformerMixin
 
@@ -129,15 +111,17 @@ class DataWrapper:
         X['delta_forecast'] = (X['date_forecast']-X['date_calc']).apply(lambda x: x.total_seconds() / 3600)
         X_submission['delta_forecast'] = (X_submission['date_forecast']-X_submission['date_calc']).apply(lambda x: x.total_seconds() / 3600)
 
-        X = self._cleanData(X) # dont apply to submission data
 
         y = self._cleanY(y)
         X = self._addTimeFeatures(X)
         X = self._addFeatureInteractions_preAgg(X)
         X = self._addAggFeatures_preAgg(X)
         X = self._addLagFeatures_preAgg(X)
-        X_agg, y_agg = self._aggregateData(X, y)
+        X = self._cleanX(X)
 
+        X = self._cleanData(X) # dont apply to submission data
+
+        X_agg, y_agg = self._aggregateData(X, y)
 
         # merge x and y to ensure that we have the same indices
         XY_TEMP = X.merge(y, on=['building_id', 'hourDayMonthYear'], how='inner')
@@ -156,18 +140,22 @@ class DataWrapper:
         self.X = X
         self.y = y['pv_measurement']
         
+        # submission data
         X_submission = self._addTimeFeatures(X_submission)
         X_submission = self._addFeatureInteractions_preAgg(X_submission)
         X_submission = self._addAggFeatures_preAgg(X_submission)
         X_submission = self._addLagFeatures_preAgg(X_submission)
-
+        X_submission = self._cleanX(X_submission)
         X_submission_agg, _ = self._aggregateData(X_submission)
 
         self.X_sub = X_submission
         self.X_sub_agg = X_submission_agg
 
 
+
     def _cleanData(self, X):
+        X['date_forecast'] = pd.to_datetime(X['date_forecast'])
+
         X = X[~((X['building_id'] == 'c') & (X['date_forecast'] < '2019-09-06'))] # C is powered on on this day -> weird measurements
         X = X[~((X['building_id'] == 'c') & (X['date_forecast'].between('2020-05-13','2020-05-14')))] # C is powered on on this day -> weird measurements
 
@@ -252,7 +240,7 @@ class DataWrapper:
         X['GHI_daily_mean'] = X.groupby(['building_id', 'dayMonthYear'])['GHI'].transform('mean')
         X['GHI_daily_std'] = X.groupby(['building_id', 'dayMonthYear'])['GHI'].transform('std')
 
-        X['effective_cloud_cover_5h_mean'] = X.groupby(['building_id', 'dayMonthYear'])['effective_cloud_cover:p'].rolling(window=5*4, center=True).mean().reset_index(drop=True)
+        X['effective_cloud_cover_5h_mean'] = X.groupby(['building_id'])['effective_cloud_cover:p'].transform(lambda x: x.rolling(5*4+1, 1, center=True).mean())
         return X
 
     def _aggregateData(self, X, y=None):
@@ -312,6 +300,51 @@ class DataWrapper:
 
         X['temp*GHI_lag_-1h'] = X.groupby(['building_id'])['temp*GHI'].shift(-1*4)
         X['temp*GHI_lag_1h'] = X.groupby(['building_id'])['temp*GHI'].shift(1*4)
+
+        # new features
+        X['effective_cloud_cover:p_-1h'] = X.groupby(['building_id'])['effective_cloud_cover:p'].shift(-1*4)
+        X['effective_cloud_cover:p_1h'] = X.groupby(['building_id'])['effective_cloud_cover:p'].shift(1*4)
+
+
+        X['cloud_base_agl:m_-1h'] = X.groupby(['building_id'])['cloud_base_agl:m'].shift(-1*4)
+        X['cloud_base_agl:m_1h'] = X.groupby(['building_id'])['cloud_base_agl:m'].shift(1*4)
+
+        return X
+    
+    def _cleanX(self, X):
+        # drop columns
+        # impute and drop columns
+
+        drop_cols = [
+            'elevation:m',
+            ]
+
+        # pressure_cols = [col for col in X.columns if 'pressure' in col]
+        # drop_cols += pressure_cols 
+        
+        drop_cols += [col for col in X.columns if ('snow' in col)]
+
+        X = X.drop(columns=drop_cols)
+        
+        impute_cols = [
+            'ceiling_height_agl:m',
+            'cloud_base_agl:m',
+            'cloud_base_agl:m_-1h',
+            'cloud_base_agl:m_1h',
+            'GHI_daily_std',
+            'GHI_lag_-1h',
+            'GHI_lag_1h',
+            'temp*GHI_lag_-1h',
+            'temp*GHI_lag_1h',
+            'effective_cloud_cover:p_-1h',
+            'effective_cloud_cover:p_1h',
+            'effective_cloud_cover_5h_mean'
+        ]
+
+        X.loc[:,impute_cols] = X.copy().sort_values(by=['date_forecast','building_id']).sort_values(by=[f'date_forecast',f'building_id']).loc[:,impute_cols].bfill().ffill().sort_index()
+
+        X['delta_forecast'] = X['delta_forecast'].fillna(0) # make sure its not in the same bin with other stuff
+
         return X
 
     def get_train(self,aggregated,drop_val=True,drop_test=True,y_scaled=False):
@@ -550,7 +583,6 @@ class Y_Scaler_MaxAbs_per_building:
         
         y_bid = pd.concat([y.rename('pv_measurement'), X], axis=1)
 
-        print(self.max_per_building)
         y = y_bid.apply(
             lambda row: row['pv_measurement'] / self.max_per_building[row['building_id']], axis=1)
         return y
