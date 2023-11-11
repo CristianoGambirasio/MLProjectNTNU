@@ -29,7 +29,7 @@ test_filters = [
 ]
 
 
-agg_strats = ['min','max','mean','std']
+agg_strats = ['min','max','mean']
 
 m_wrap = DataWrapper(
     impute_strategy = 'fbfill',

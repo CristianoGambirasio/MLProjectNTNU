@@ -111,7 +111,6 @@ class DataWrapper:
         X['delta_forecast'] = (X['date_forecast']-X['date_calc']).apply(lambda x: x.total_seconds() / 3600)
         X_submission['delta_forecast'] = (X_submission['date_forecast']-X_submission['date_calc']).apply(lambda x: x.total_seconds() / 3600)
 
-        X = self._cleanData(X) # dont apply to submission data
 
         y = self._cleanY(y)
         X = self._addTimeFeatures(X)
@@ -119,6 +118,9 @@ class DataWrapper:
         X = self._addAggFeatures_preAgg(X)
         X = self._addLagFeatures_preAgg(X)
         X = self._cleanX(X)
+
+        X = self._cleanData(X) # dont apply to submission data
+
         X_agg, y_agg = self._aggregateData(X, y)
 
         # merge x and y to ensure that we have the same indices
@@ -152,6 +154,8 @@ class DataWrapper:
 
 
     def _cleanData(self, X):
+        X['date_forecast'] = pd.to_datetime(X['date_forecast'])
+
         X = X[~((X['building_id'] == 'c') & (X['date_forecast'] < '2019-09-06'))] # C is powered on on this day -> weird measurements
         X = X[~((X['building_id'] == 'c') & (X['date_forecast'].between('2020-05-13','2020-05-14')))] # C is powered on on this day -> weird measurements
 
@@ -236,7 +240,7 @@ class DataWrapper:
         X['GHI_daily_mean'] = X.groupby(['building_id', 'dayMonthYear'])['GHI'].transform('mean')
         X['GHI_daily_std'] = X.groupby(['building_id', 'dayMonthYear'])['GHI'].transform('std')
 
-        X['effective_cloud_cover_5h_mean'] = X.groupby(['building_id'])['effective_cloud_cover:p'].rolling(window=5*4, center=True).mean().reset_index(drop=True)
+        X['effective_cloud_cover_5h_mean'] = X.groupby(['building_id'])['effective_cloud_cover:p'].transform(lambda x: x.rolling(5*4+1, 1, center=True).mean())
         return X
 
     def _aggregateData(self, X, y=None):
@@ -310,7 +314,14 @@ class DataWrapper:
     def _cleanX(self, X):
         # drop columns
         # impute and drop columns
-        drop_cols = ['elevation:m']
+
+        drop_cols = [
+            'elevation:m',
+            ]
+
+        # pressure_cols = [col for col in X.columns if 'pressure' in col]
+        # drop_cols += pressure_cols 
+        
         drop_cols += [col for col in X.columns if ('snow' in col)]
 
         X = X.drop(columns=drop_cols)
@@ -332,8 +343,7 @@ class DataWrapper:
 
         X.loc[:,impute_cols] = X.copy().sort_values(by=['date_forecast','building_id']).sort_values(by=[f'date_forecast',f'building_id']).loc[:,impute_cols].bfill().ffill().sort_index()
 
-        X['delta_forecast'] = X['delta_forecast'].fillna(0)
-
+        X['delta_forecast'] = X['delta_forecast'].fillna(0) # make sure its not in the same bin with other stuff
 
         return X
 
