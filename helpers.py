@@ -61,7 +61,7 @@ class DataWrapper:
         self.X = None
         self.X_agg = None
 
-        self.X_sub = None
+        self.X_sub = None 
         self.X_sub_agg = None
 
         self.train_idx = None
@@ -136,6 +136,7 @@ class DataWrapper:
         X = self._addFeatureInteractions_preAgg(X)
         X = self._addAggFeatures_preAgg(X)
         X = self._addLagFeatures_preAgg(X)
+        X = self._cleanX(X)
         X_agg, y_agg = self._aggregateData(X, y)
 
 
@@ -160,7 +161,7 @@ class DataWrapper:
         X_submission = self._addFeatureInteractions_preAgg(X_submission)
         X_submission = self._addAggFeatures_preAgg(X_submission)
         X_submission = self._addLagFeatures_preAgg(X_submission)
-
+        X_submission = self._cleanX(X_submission)
         X_submission_agg, _ = self._aggregateData(X_submission)
 
         self.X_sub = X_submission
@@ -215,6 +216,25 @@ class DataWrapper:
         y = y[~zeroData_24h].reset_index(drop=True) # Solar Panels B and C have some 0 values for longer than 24h, also in summer
 
         return y
+    
+    def _cleanX(self, X):
+        # drop columns
+        # impute and drop columns
+
+        drop_cols = [
+            'elevation:m',
+            ]
+
+        # pressure_cols = [col for col in X.columns if 'pressure' in col]
+        # drop_cols += pressure_cols 
+        
+        drop_cols += [col for col in X.columns if ('snow' in col)]
+
+        X = X.drop(columns=drop_cols)
+
+        X['delta_forecast'] = X['delta_forecast'].fillna(0)
+
+        return X
 
     def _addTimeFeatures(self, X):
         X['hourDayMonthYear'] = X['date_forecast'].dt.floor('H')
@@ -252,7 +272,7 @@ class DataWrapper:
         X['GHI_daily_mean'] = X.groupby(['building_id', 'dayMonthYear'])['GHI'].transform('mean')
         X['GHI_daily_std'] = X.groupby(['building_id', 'dayMonthYear'])['GHI'].transform('std')
 
-        X['effective_cloud_cover_5h_mean'] = X.groupby(['building_id', 'dayMonthYear'])['effective_cloud_cover:p'].rolling(window=5*4, center=True).mean().reset_index(drop=True)
+        X['effective_cloud_cover_5h_mean'] = X.groupby(['building_id'])['effective_cloud_cover:p'].transform(lambda x: x.rolling(5*4+1, 1, center=True).mean())
         return X
 
     def _aggregateData(self, X, y=None):
@@ -472,7 +492,6 @@ class DataWrapper:
             if pred_strat == 'clip':
                 y_pred = y_pred.clip(lower=0)
             if pred_strat == 'sun_el_thr':
-
                 y_pred = y_pred * (X['max_sun_elevation:d'] > sun_el_thr)
         return y_pred
 
